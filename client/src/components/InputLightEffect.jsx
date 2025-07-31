@@ -28,7 +28,7 @@ export const InputLightEffect = ({ value, onChange, onEnter }) => {
   const handleKeyDown = (e) => e.key === "Enter" && onEnter?.();
 
   return (
-    <div className="relative w-[450px] mb-3">
+    <div className="relative w-[350px] sm:w-[450px] mb-3">
       <input
         ref={inputRef}
         value={value}
@@ -41,7 +41,7 @@ export const InputLightEffect = ({ value, onChange, onEnter }) => {
         onMouseLeave={handleMouseLeave}
         autoComplete="off"
         placeholder="Paste a Ethereum address"
-        className="h-10 w-full rounded-sm bg-black/30 px-4 text-center text-cyan-100 placeholder:text-cyan-100/70 transition-colors duration-300 focus:border-green-900 focus:outline-lime-900 outline-none"
+        className="h-10 w-full rounded-sm bg-black/30 px-4 text-xs sm:text-base text-center text-cyan-100 placeholder:text-cyan-100/70 transition-colors duration-300 focus:border-green-900 focus:outline-lime-900 outline-none"
       />
       <div
         className={clsx(
