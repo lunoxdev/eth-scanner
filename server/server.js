@@ -8,8 +8,8 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*" } });
 
-server.listen(3000, () =>
-  console.log("✅ Backend ready on http://localhost:3000")
+server.listen(8080, () =>
+  console.log("✅ Backend ready on http://localhost:8080")
 );
 
 app.use(cors());
