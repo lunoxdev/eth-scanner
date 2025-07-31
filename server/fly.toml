@@ -1,3 +1,8 @@
+# fly.toml app configuration file generated for eth-scanner on 2025-07-31T16:52:32Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = 'eth-scanner'
 primary_region = 'bog'
 
