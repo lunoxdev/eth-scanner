@@ -54,7 +54,7 @@ node server.js
 cd ../client
 pnpm install
 
-# Create .env file to set the socket URL ( http://localhost:3000 )
+# Create .env file with your Fly.io or any other socket URL
 echo "VITE_SOCKET_URL=your_socket_here > .env
 
 pnpm dev
