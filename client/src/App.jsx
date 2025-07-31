@@ -31,7 +31,7 @@ export default function WalletScanner() {
   return (
     <div className="relative">
       <Background />
-      <div className="flex flex-col items-center justify-center h-screen mulish-regular">
+      <div className="flex flex-col items-center justify-center h-screen mulish-regular p-4">
         <InputLightEffect
           value={address}
           onChange={(e) => setAddress(e.target.value)}

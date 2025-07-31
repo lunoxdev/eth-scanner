@@ -2,7 +2,7 @@ export default function ResultList({ data }) {
   if (!data) return null;
 
   return (
-    <ul className="mt-8 text-cyan-100">
+    <ul className="mt-8 text-cyan-100 text-xs sm:text-base w-full wrap-break-word">
       <li>
         <strong>Address:</strong> {data.address}
       </li>
