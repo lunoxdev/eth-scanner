@@ -32,6 +32,15 @@ export default function WalletScanner() {
     <div className="relative flex justify-center">
       <Background />
       <div className="flex flex-col items-center justify-center h-screen mulish-regular">
+        <p className="text-center text-xs mb-6">
+          Find an ETH address on{" "}
+          <a
+            href="https://etherscan.io/txs"
+            className="cursor-pointer text-cyan-500 font-bold hover:underline"
+          >
+            etherscan.io
+          </a>
+        </p>
         <InputLightEffect
           value={address}
           onChange={(e) => setAddress(e.target.value)}

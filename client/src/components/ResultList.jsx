@@ -10,14 +10,14 @@ export default function ResultList({ data }) {
         <strong>Balance:</strong> {data.balance}
       </li>
       <li>
-        <strong>Contract:</strong>
+        <strong>Contract: </strong>
         {data.contractCode !== "0x" ? "False" : "True"}
       </li>
       <li>
         <strong>Nonce:</strong> {data.nonce}
       </li>
       <li>
-        <strong>ENS:</strong> {data.ens}
+        <strong>ENS:</strong> {data.ens || "-"}
       </li>
       <li>
         <strong>Block Number:</strong> {data.blockNumber}
