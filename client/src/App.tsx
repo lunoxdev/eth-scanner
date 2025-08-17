@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
-import socket from "./socket";
-import { InputLightEffect } from "./components/InputLightEffect.jsx";
-import ResultList from "./components/ResultList.jsx";
-import Loader from "./components/Loader.jsx";
-import Background from "./components/Background.jsx";
-import ScanBtn from "./components/ScanBtn.jsx";
+import socket from "./socket.js";
+import { InputLightEffect } from "./components/InputLightEffect";
+import ResultList from "./components/ResultList";
+import Loader from "./components/Loader";
+import Background from "./components/Background";
+import ScanBtn from "./components/ScanBtn";
+import { type ScanResults } from "./types";
 
 export default function WalletScanner() {
-  const [address, setAddress] = useState("");
-  const [result, setResult] = useState(null);
-  const [loader, setLoader] = useState(false);
+  const [address, setAddress] = useState<string>("");
+  const [result, setResult] = useState<ScanResults | null>(null);
+  const [loader, setLoader] = useState<boolean>(false);
 
   useEffect(() => {
-    socket.on("scanResult", (data) => {
+    socket.on("scanResult", (data: ScanResults) => {
       setResult(data);
       setLoader(false);
     });
@@ -32,7 +33,7 @@ export default function WalletScanner() {
     <div className="relative flex justify-center">
       <Background />
       <div className="flex flex-col items-center justify-center h-screen mulish-regular">
-        <p className="text-center text-xs mb-6">
+        <p className="text-center text-xs md:text-sm mb-6 font-semibold">
           Find an ETH address on{" "}
           <a
             href="https://etherscan.io/txs"

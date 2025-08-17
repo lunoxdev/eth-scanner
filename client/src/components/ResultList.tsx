@@ -1,4 +1,6 @@
-export default function ResultList({ data }) {
+import { type ListResult } from "../types";
+
+export default function ResultList({ data }: { data: ListResult }) {
   if (!data) return null;
 
   return (

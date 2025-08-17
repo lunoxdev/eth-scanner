@@ -1,8 +1,9 @@
 import { useRef, useState } from "react";
 import clsx from "clsx";
+import { type InputLightEffectTypes } from "../types";
 
-export const InputLightEffect = ({ value, onChange, onEnter }) => {
-  const inputRef = useRef(null);
+export function InputLightEffect({ value, onChange }: InputLightEffectTypes) {
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [show, setShow] = useState(false);
@@ -25,7 +26,7 @@ export const InputLightEffect = ({ value, onChange, onEnter }) => {
 
   const handleMouseEnter = () => setShow(true);
   const handleMouseLeave = () => !isFocused && setShow(false);
-  const handleKeyDown = (e) => e.key === "Enter" && onEnter?.();
+  const handleKeyDown = (e) => e.key === "Enter";
 
   return (
     <div className="relative w-[350px] sm:w-[450px] mb-3">
@@ -55,4 +56,4 @@ export const InputLightEffect = ({ value, onChange, onEnter }) => {
       />
     </div>
   );
-};
+}
